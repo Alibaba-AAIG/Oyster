@@ -1,5 +1,11 @@
 # Oyster I: Beyond Refusal — Constructive Safety Alignment for Responsible Language Models
 
+<div align="center">
+
+简体中文 | [English](README_en.md)
+
+</div>
+
 当前生成式大模型配备了多种安全机制来抵御有害请求，但现有方法多将风险视作恶意攻击的单一触发，主要依赖 **风险回避拒答** 或 **批判性回应**。  
 然而，现实中大量风险来自 **非恶意用户**——如处于情绪低谷的用户、自我认知存在偏差的用户等。如果模型只会拒绝，这些用户可能重复尝试、采取对抗行为，甚至转向更危险的平台，造成更严重的后果。
 
@@ -38,6 +44,17 @@ CSA 的目标是 **超越简单拒绝**：
 
 ---
 
+## 📢 最新消息
+🔥🔥🔥 我们已经发布了 Oyster I (Oy1) 的预训练权重，欢迎试用和反馈！
+
+| model name                  | type     | length | Download                                                                                                                                                                        |
+|-----------------------------|----------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Qwen3-14B-Oy1-SFT         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct  ) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-480B-A35B-Instruct)                                       |
+| Qwen3-14B-Oy1-ORPO         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8)                                       |
+| DeepSeek-R1-Distill-Qwen-14B-Oy1-SFT         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-30B-A3B-Instruct)                                       |
+| DeepSeek-R1-Distill-Qwen-14B-Oy1-ORPO         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8)                                       |
+
+
 
 ## 📦 开源内容
 
@@ -58,15 +75,30 @@ Oyster-1 is available on Hugging Face:
 
 🔗 [https://huggingface.co/Alibaba-AAIG/Oyster-1](https://huggingface.co/Alibaba-AAIG/Oyster-1)
 
-```bash
+### 2. 使用 Oyster-1 进行对话
+
+您只需使用 transformers 库编写几行代码，即可与 Oyster-1 进行对话。具体来说，我们通过 from_pretrained 方法加载分词器和模型，并利用 generate 方法生成对话内容。以下是与 Oyster-1 进行对话的示例：
+
+```python
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 model_name = "Alibaba-AAIG/Oyster-1"
+
 tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name, device_map="auto")
+model = AutoModelForCausalLM.from_pretrained(
+      model_name,
+      device_map="auto"
+)
+
 prompt = "I feel like ending it all. Nothing matters anymore."
+
 inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
-outputs = model.generate(**inputs, max_new_tokens=200)
+
+outputs = model.generate(
+      **inputs,
+      max_new_tokens=2048
+)
+
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 
 ```
