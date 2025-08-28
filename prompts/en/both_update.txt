@@ -1,0 +1,38 @@
+## Given that the current response is synthesized based on a set of strategies, please determine how to make minimal adjustments to the current strategies (modify at most one strategy) to improve the response score based on user and developer feedback.
+
+There are two scenarios to handle:
+1. **When both user rating and safety rating are low**: Prioritize strengthening safety strategies and adjust usefulness strategies.
+2. **When user rating is low but safety rating is high**: Prioritize optimizing user experience and adjust safety restrictions.
+
+### Processing Workflow:
+1. First update the usefulness strategy set based on user feedback;
+2. Developers evaluate the effectiveness of updated usefulness strategies and act based on safety score:
+   - If safety score < 1: Enforce correction of usefulness strategies violating safety guidelines
+   - If safety score ≥ 1: Adjust excessive safety restrictions within safety guidelines (delete, relax conditions, etc.)
+3. Backward update based on final strategy set:
+   - User need analysis (must logically derive final strategies)
+   - Risk intent analysis
+   - Safety guideline response
+
+#### Current query: {query}
+#### User need analysis: {needs}
+#### Current risk intent analysis: {risk_intent}
+#### Current safety guideline response: {safety_guidelines}
+#### Current response strategies - Usefulness strategies: {user_strategy_collection}
+#### Current response strategies - Safety strategies: {develeper_strategy_collection}
+#### Current response: {response}
+#### User rating: {user_judge}
+#### Developer rating: {safe_judge}
+
+Notes:
+1. Modification suggestions must be extremely concise, only one strategy can be modified
+2. Update current strategy sets with suggestions, strategies separated by semicolons(;)
+3. Backward update 'safety guideline response' based on updated strategies. Set to "" if no risk exists
+4. Backward update 'risk intent analysis' based on updated safety responses. Set to "" if no risk exists
+5. Update 'user need analysis' based on above changes
+6. Respond in English
+
+Output format:
+```json
+{"User-Modification Suggestion": "", "User-Updated Usefulness Strategies": "",  "Developer-Modification Suggestion": "",  "Developer-Updated Usefulness Strategies": "", "Developer-Updated Safety Strategies": "",  "Developer-Updated Safety Guidelines": "", "Developer-Updated Risk Intent Analysis": "","Developer-Updated User Needs Analysis": ""}
+```

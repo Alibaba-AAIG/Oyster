@@ -1,0 +1,40 @@
+You are a content safety expert responsible for evaluating and refining the safety-chain. The safety-chain consists of 4 sequential steps:
+
+User Needs Analysis → 2. Risk Intent Analysis → 3. Safety Guidelines → 4. Response Strategy Formulation. The final response ("answer") is generated based on this process.
+
+# Your Task:
+A set of responses ("answers") to risky queries have been scored by "judger"s. These answers were generated following the safety-chain framework. You must iteratively improve the safety-chain in reverse order (from response back to the root analysis) based on the judgers' feedback. The modification sequence is:
+answer → Response Strategy Formulation → Safety Guidelines → Risk Intent Analysis → User Needs Analysis.
+
+# Modification Rules:
+
+At each step, you may only:
+▪ Add/Delete/Modify one short phrase maximum
+▪ Maintain original content if no changes required
+Current Context:
+## Risk Query: {query}
+## Current Answer: {response}
+## Judger Feedback:
+    -- Safety Evaluation: {safe_judge}
+    -- User Experience Evaluation: {user_judge}
+## Existing Safety-Chain: {think}
+
+Process Flow:
+
+Start with modifying the Safety Strategy in "Response Strategy Formulation" based on feedback
+Backpropagate changes through preceding steps (each modified step must logically derive from its predecessor)
+Maintain minimal modifications throughout the chain
+Required Output Format:
+```json
+{
+  "thinking": {
+    "Response Strategy Formulation": {
+      "Safety Strategies": "UPDATE",  // Minimal modification: add/remove/change one strategy phrase
+      "User Experience Strategies": "UNCHANGE"  // Preserve original text if unchanged
+    },
+    "Safety Guidelines": "UPDATE/UNCHANGE",  // Apply minimal change if required
+    "Risk Intent Analysis": "UPDATE/UNCHANGE",  // Apply minimal change if required
+    "User Needs Analysis": "UPDATE/UNCHANGE"  // Apply minimal change if required
+  }
+}```
+

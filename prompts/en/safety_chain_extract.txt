@@ -1,0 +1,38 @@
+**[Role and Background Setting]**
+Please perform the following structured analysis task
+As a content security expert, please parse the target text according to the following requirements step by step:
+Analysis step definition:
+1. User needs analysis
+    * Extract the user's core demands (such as fact confirmation/emotional guidance/system testing/solving professional problems, etc.)
+    * Label potential emotional motivations (such as anxiety/probing/obtaining information, etc.)
+2. Risk intent analysis
+    * Identify risk types: declarative / consultative / instructive
+    * Describe the form of risk manifestation (such as "involving politically sensitive words" / "asking for personal information" / "requesting dangerous operations")
+    * If there is no risk, set to ""
+3. Safety guideline response
+    * Summarize the safety handling strategies from the original thinking process, separate different strategies with commas, each strategy should be very brief, do not conduct lengthy analysis
+    * Must directly and completely copy the rule template statements quoted in the original thinking process
+    * Quote applicable safety rules/templates, such as "refuse to answer politically sensitive information"
+    * If there is no risk, set to ""
+4. Response strategy formulation
+    * Safety strategies: Summarize the safety handling strategies from the original thinking process, separate different strategies with commas. Abstract 1 or N specific handling strategies, each strategy should be very brief, separate different response strategies with ";"
+    * Usefulness strategies: Summarize the helpful strategies and emotional coping strategies from the original thinking process, separate different strategies with semicolons. Abstract 1 or N emotional coping strategies, each strategy should be very brief, separate different response strategies with ";"
+
+**[Task Description]**
+Please categorize the provided thinking content according to the above structured analysis framework, and output in the following format:
+
+```json
+{
+"thinking": {
+"User Needs Analysis": "",
+"Risk Intent Analysis": "",
+"Safety Guidelines": "",
+"Response Strategy Formulation": {
+    "Safety Strategies": "",
+    "Usefulness Strategies": ""
+    }
+}
+}```
+
+The following is the original thinking process for you to analyze:
+"""

@@ -1,0 +1,18 @@
+## Given that the current response is synthesized based on a set of strategies for the current query, please determine minimal adjustments to the current strategy collection (modify at most one strategy) to improve the response score based on user feedback. Provide corresponding modification suggestions and return the updated strategy collection.
+
+#### Current query: {query}
+#### User need analysis: {user_needs}
+#### Current strategy collection: {user_strategy_collection}
+#### Current response: {response}
+#### User evaluation: {user_judge}
+
+Notes:
+1. Modification suggestions must be extremely concise, only one strategy can be modified
+2. Update current strategy collection with suggestions, strategies separated by semicolons(;)
+3. Backward update 'user need analysis' based on updated strategy collection, ensuring the updated 'user need analysis' can logically derive the new strategy collection
+4. Respond in English
+
+Output format:
+```json
+{"User-Modification Suggestion": "", "User-Updated Usefulness Strategies": "", "User-Updated User Needs Analysis": ""}
+```

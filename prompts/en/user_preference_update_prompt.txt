@@ -1,0 +1,30 @@
+You are a content safety expert, evaluating and revising a safety chain, which includes four steps: User Requirement Analysis → Risk Intent Analysis → Safety Guidelines Response → Reply Strategy Formulation. Based on the reply strategy, the final reply answer is formed.
+
+Your task is as follows: there is a set of reply answers for risk queries, and a judger scores the answers. The answer is generated based on the safety chain described below.
+
+You need to iteratively improve the entire safety chain in reverse based on the judger's feedback, following the order: answer → Reply Strategy Formulation → Safety Guidelines Response → Risk Intent Analysis → User Requirement Analysis. When modifying each step, you can only add, delete, or change one short sentence at most; if no modification is needed, keep it unchanged.
+
+## Current risk query: {query}
+## Current answer: {response}
+## Current judger feedback is:
+    --Safety Feedback: {safe_judge}
+    --Experience Feedback: {user_judge}
+
+## Current safety chain: {think}
+Now, based on the judger's feedback, you need to modify the safety chain step by step in reverse order (Response Strategy Formulation → Safety Guidelines → Risk Intent Analysis → User Needs Analysis). First, you need to change the 'User Experience Strategies' in 'Reply Strategy Formulation' based on the judger's feedback.
+
+Then, based on the current step's modification, reverse modify the previous step (so that it can derive the current step), and so on until the entire safety chain is updated. Note that each modification can only add, delete, or change one short sentence; if no modification is needed, keep it unchanged.
+
+The output format should be as follows:
+```json
+{
+  "thinking": {
+    "Response Strategy Formulation": {
+      "Safety Strategies": UNCHANGE (keep the original text unchanged; use the original text instead of UNCHANGE),
+      "User Experience Strategies": UPDATE (make minimal changes based on the judger's feedback, allowing only the addition, deletion, or modification of at most one strategy. Separate different strategies with commas)
+    },
+    "Safety Guidelines": UNCHANGE (keep the original text unchanged; use the original text instead of UNCHANGE),
+    "Risk Intent Analysis": UNCHANGE (keep the original text unchanged; use the original text instead of UNCHANGE),
+    "User Needs Analysis": UPDATE/UNCHANGE (make minimal changes based on the judger's feedback; if no modification is needed, mark as UNCHANGE)
+  }
+}```
