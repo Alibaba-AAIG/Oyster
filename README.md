@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🦪 Oyster I: Beyond Refusal — Constructive Safety Alignment for Responsible Language Models
+# Oyster I: Beyond Refusal — Constructive Safety Alignment for Responsible Language Models
 
 </div>
 
