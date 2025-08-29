@@ -91,12 +91,7 @@
 
 ## 🚀 快速上手
 
-### 1. 模型下载
-Oyster-1 is available on Hugging Face:
-
-🔗 [https://huggingface.co/Alibaba-AAIG/Oyster-1](https://huggingface.co/Alibaba-AAIG/Oyster-1)
-
-### 2. 使用 Oyster-1 进行对话
+### 1. 使用 Oyster-1 进行对话
 
 您只需使用 transformers 库编写几行代码，即可与 Oyster-1 进行对话。具体来说，我们通过 from_pretrained 方法加载分词器和模型，并利用 generate 方法生成对话内容。以下是与 Oyster-1 进行对话的示例：
 
@@ -126,24 +121,11 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 > 💡 预期输出：一个富有同情心和建设性的回应，提供情感支持和资源，而非简单拒绝。
 ---
 
-### 3.使用Construction Score 评测
-待补充
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### 2.使用 Lingo-BP
+在ini.sh中填写INPUT_PATH，TOKEN和PLATFORM（这里可以使用DashScope的API），然后直接运行下面的命令即可（也可以运行lingo_single.ipynb来逐行了解Lingo-BP过程）
+```bash
+bash ini.sh
+```
 
 
 ## 📚 引用
