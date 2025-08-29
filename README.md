@@ -122,7 +122,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ---
 
 ### 2.使用 Lingo-BP
-在ini.sh中填写INPUT_PATH，TOKEN和PLATFORM（这里可以使用DashScope的API），然后直接运行下面的命令即可（也可以运行lingo_single.ipynb来逐行了解Lingo-BP过程）
+在ini.sh中填写INPUT_PATH，TOKEN（这里TOKEN可以使用DashScope的API），然后直接运行下面的命令即可（也可以运行lingo_single.ipynb来逐行了解Lingo-BP过程）
 ```bash
 bash ini.sh
 ```
