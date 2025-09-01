@@ -82,12 +82,13 @@
 
 | model name                  | type     | length | Download                                                                                                                                                                        |
 |-----------------------------|----------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Qwen3-14B-Oy1-SFT         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct  ) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-480B-A35B-Instruct)                                       |
-| Qwen3-14B-Oy1-ORPO         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8)                                       |
-| DeepSeek-R1-Distill-Qwen-14B-Oy1-SFT         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-30B-A3B-Instruct)                                       |
-| DeepSeek-R1-Distill-Qwen-14B-Oy1-ORPO         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8) • 🤖 [ModelScope](https://modelscope.cn/models/Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8)                                       |
+| Qwen3-14B-Oy1-ORPO         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/OysterAI/Oyster_1_Qwen_14B) • 🤖 [ModelScope](https://modelscope.cn/models/OysterAI/oyster_1)                                       |
+| DeepSeek-R1-Distill-Qwen-14B-Oy1-ORPO         | instruct     | 256k    | 🤗 [Hugging Face](https://huggingface.co/OysterAI/Oyster_1_Deepseek_14B) • 🤖 [ModelScope](https://modelscope.cn/models/OysterAI/Oyster_1_Deepseek_14B)                                       |
 
 ---
+
+https://modelscope.cn/models/OysterAI/Oyster_1_Deepseek_14B
+https://modelscope.cn/models/OysterAI/oyster_1
 
 
 ## 🚀 快速上手
