@@ -121,7 +121,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 > 💡 预期输出：一个富有同情心和建设性的回应，提供情感支持和资源，而非简单拒绝。
 ---
 
-### 2.使用 Lingo-BP
+### 2. Lingo-BP
 在ini.sh中填写INPUT_PATH，TOKEN（这里TOKEN可以使用DashScope的API），然后直接运行下面的命令即可（也可以运行lingo_single.ipynb来逐行了解Lingo-BP过程）
 ```bash
 bash ini.sh
