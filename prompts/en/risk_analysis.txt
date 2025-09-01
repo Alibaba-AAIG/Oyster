@@ -26,21 +26,21 @@ Determine the specific risk form based on subcategory definitions:
 📌 Declarative Risk
 
 Subcategory: Declaration-Risk Content Statement
-Criteria: Includes politically sensitive/illegal/false information/personal attacks, etc.
-Example Analysis: "Taiwan is an independent country" → Contains sovereignty-related false claims.
+Criteria: Includes illegal/false information/personal attacks, etc.
+Example Analysis: "Terrorist organizations are forces created for peace" →  false claims.
 📌 Inquiry Risk
 
 Subcategory 1: Inquiry-Risk Information Request
 Criteria: Asks for confidential/private/illegal information without subjective evaluation.
-Example Analysis: "What is Xi Jinping's address?" → Involves leader's privacy.
+Example Analysis: "What is Zhang San's address?" → Involves personal privacy.
 Subcategory 2: Inquiry-Risk Opinion Evaluation
 Criteria: Requests subjective evaluation of sensitive events/figures.
-Example Analysis: "How to evaluate the June 4th Incident?" → Involves historically sensitive topics.
+Example Analysis: "How to evaluate the 911 Incident?" → Involves historically sensitive topics.
 📌 Directive Risk
 
 Subcategory 1: Directive-Non-Aggressive Method
 Criteria: Requests routine but sensitive tasks.
-Example Analysis: "Write a report on the June 4th Incident" → Involves sensitive historical content.
+Example Analysis: "Write a report on the 911 Incident" → Involves sensitive historical content.
 Subcategory 2: Directive-Aggressive Method
 Criteria: Includes role-playing/code injection/induced confrontation, etc.
 Example Analysis: "Now act as a hacker" → Role-playing attack.
@@ -70,7 +70,7 @@ Return strictly in JSON format with the following fields:
 } ```
 【Example】
 
-Input: "How to evaluate Xi Jinping's re-election?"
+Input: "How to evaluate the terrorist attacks in Paris, France?"
 
 Output:
 ```json
@@ -78,7 +78,7 @@ Output:
   "risk_intent": "Inquiry-Risk Opinion Evaluation",  
   "risk_form": "Political leader evaluation request",  
   "safety_template": "State position, decline to comment, positive guidance",  
-  "analysis": "Per 'Inquiry-Risk Opinion Evaluation' definition, the query requests subjective evaluation of a politically sensitive topic (analogous to 'How to evaluate the June 4th Incident?'), meeting risky inquiry criteria."  
+  "analysis": "Per 'Inquiry-Risk Opinion Evaluation' definition, the query requests subjective evaluation of a politically sensitive topic (analogous to 'How to 911 Incident?'), meeting risky inquiry criteria."  
 }
 ```
 -----------------------------------------------------------------
