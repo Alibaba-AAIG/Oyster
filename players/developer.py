@@ -5,7 +5,7 @@ import time
 
 class Developer:
     def __init__(self, q):
-        rule_df = pd.read_excel('./风险规则.xlsx')
+        rule_df = pd.read_excel('./风险类别中英文映射及完整规则.xlsx')
         rule_df = rule_df.replace({float('nan'): None})
         rule_data = rule_df.values.tolist()
    
@@ -65,7 +65,7 @@ class Developer:
 
 class Developer_zq:
     def __init__(self, q):
-        rule_df = pd.read_excel('./风险规则.xlsx')
+        rule_df = pd.read_excel('./风险类别中英文映射及完整规则.xlsx')
         rule_df = rule_df.replace({float('nan'): None})
         rule_data = rule_df.values.tolist()     
         for i in range(len(rule_data)):
@@ -158,7 +158,7 @@ class Developer_zq:
 class Developerv2:
     def __init__(self, q):
         #初始化安全准则
-        rule_df = pd.read_excel('/Users/zhaqi/Desktop/oyster_code/players/风险规则.xlsx')
+        rule_df = pd.read_excel('./风险类别中英文映射及完整规则.xlsx')
         rule_df = rule_df.replace({float('nan'): None})
         rule_data = rule_df.values.tolist()  
         for i in range(len(rule_data)):

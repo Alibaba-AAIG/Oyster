@@ -21,7 +21,6 @@ from lingo_bp import LingoBP
 from utils.utils import *
 def parse_args():
     parser = ArgumentParser()
-    parser.add_argument('--platform', type=str, required=True, choices=['sampool', 'whale'])
     parser.add_argument('--iterations', type = list, required=False, default=['both','both', 'both'], help="iterations for optimization, e.g. ['user','developer'] or ['both','both']")
     parser.add_argument("--input", type=str, required=True, help="input xlsx/csv path, with col trace_id,sys_prompt,user_prompt")
     parser.add_argument("--output_dir", type=str, required=True, help="output dir")
@@ -72,10 +71,9 @@ def print_args(args):
     
 print_args(args)
 
-args.model = "QwQ-32B" if args.platform == "whale" else args.model
+args.model = "QwQ-32B"
 
 q = QWQ(
-    platform=args.platform,
     token=args.token,
     model_type=args.model
 )

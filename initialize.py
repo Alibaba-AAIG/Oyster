@@ -1,17 +1,13 @@
 import pandas as pd
-from sampool import SampoolDashScopeInvoker, SampoolDashScopeChatRequest, SampoolDashScopeResponse
-from typing import Generator, Union
 import time
 import json
 import threading
 import queue
-import random
 import sys
 import os
 import re
 from utils.QwQ import QWQ
 from argparse import ArgumentParser
-import textwrap
 from datetime import datetime
 def parse_args():
     parser = ArgumentParser()
@@ -20,8 +16,6 @@ def parse_args():
                       help="input file name")
     parser.add_argument("--token", type=str, required=True,
                       help="Sampool 访问令牌")
-    parser.add_argument('--platform', type=str, required=True, choices=['sampool', 'whale'])
-    
     # 多阶段控制
     stage_group = parser.add_argument_group('Pipeline Stages')
     stage_group.add_argument("--stage_inference", action='store_true',
@@ -109,8 +103,7 @@ print_args(args)
 
 class Llm:
     def __init__(self,args):
-        self.q=q = QWQ(
-    platform=args.platform,
+        self.q = QWQ(
     token=args.token,
     model_type=args.model
     )
