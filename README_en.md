@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🦪 Oyster I: Beyond Refusal — Constructive Safety Alignment for Responsible Language Models
+# Oyster I: Beyond Refusal — Constructive Safety Alignment for Responsible Language Models
 
 </div>
 
@@ -11,7 +11,7 @@
 
 <div align="center">
 
-[简体中文](README.md) | [English]
+[简体中文](README.md) | English
 
 </div>
 
@@ -159,7 +159,3 @@ We thank the open-source community and the researchers advancing AI safety.
 Oyster-1 is part of Alibaba AAIG's commitment to responsible AI.
 >The world is your oyster.
 >Let’s build AI that helps everyone find the pearl within.
-
-
-
-
