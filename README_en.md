@@ -91,13 +91,7 @@ This project will release the following:
 
 ## 🚀 Quick Start
 
-### 1. Download the Model
-
-Oyster‑1 is available on Hugging Face:
-
-🔗 [https://huggingface.co/Alibaba-AAIG/Oyster-1](https://huggingface.co/Alibaba-AAIG/Oyster-1)
-
-### 2. Chat with Oyster‑1
+### 1. Chat with Oyster‑1
 
 You can interact with Oyster‑1 using just a few lines of code with the `transformers` library. Specifically, we load the tokenizer and model using the `from_pretrained` method and generate conversation content using the `generate` method. Below is an example of how to converse with Oyster‑1:
 
@@ -127,7 +121,13 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 > 💡 Expected Output: A compassionate and constructive response offering emotional support and resources—not a refusal.
 ---
 
-### 3. Use Construction Score for Evaluation
+### 2. Lingo-BP
+Fill in the INPUT_PATH and TOKEN (the TOKEN can be obtained from DashScope's API) in the ini.sh file, then simply run the following command:
+
+```bash
+bash ini.sh
+```
+
 
 
 ## 📚Citation
