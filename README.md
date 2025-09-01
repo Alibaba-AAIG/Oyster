@@ -87,8 +87,6 @@
 
 ---
 
-https://modelscope.cn/models/OysterAI/Oyster_1_Deepseek_14B
-https://modelscope.cn/models/OysterAI/oyster_1
 
 
 ## 🚀 快速上手
