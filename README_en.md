@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-        &nbsp&nbsp🤗 <a href="https://huggingface.co/Oyster">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/oyster">ModelScope</a>&nbsp&nbsp |  &nbsp&nbsp📄 <a href=" None ">Arxiv</a>
+        &nbsp&nbsp🤗 <a href="https://huggingface.co/OysterAI">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/oyster">ModelScope</a>&nbsp&nbsp |  &nbsp&nbsp📄 <a href=" None ">Arxiv</a>
 </a>&nbsp&nbsp 
 </p>
 
