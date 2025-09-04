@@ -5,10 +5,9 @@
 </div>
 
 <p align="center">
-        &nbsp&nbsp🤗 <a href="https://huggingface.co/OysterAI">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/oyster">ModelScope</a>&nbsp&nbsp |  &nbsp&nbsp📄 <a href=" None ">Arxiv</a>
+        &nbsp&nbsp🤗 <a href="https://huggingface.co/OysterAI">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href="https://modelscope.cn/organization/OysterAI">ModelScope</a>&nbsp&nbsp |  &nbsp&nbsp📄 <a href="https://arxiv.org/abs/2509.01909">Arxiv</a>
 </a>&nbsp&nbsp 
 </p>
-
 
 <div align="center">
 
