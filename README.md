@@ -146,6 +146,10 @@ bash ini.sh
 提交 Pull Request 改进模型或评测
 在 Discussions 中交流想法
 
+欢迎任何意见、想法、和反馈: 
+ranjie.drj@alibaba-inc.com
+liujiexi.ljx@alibaba-inc.com
+
 ---
 ## 📄 License
 本项目遵循 Apache 2.0 License。
