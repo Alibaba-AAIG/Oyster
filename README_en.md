@@ -132,11 +132,11 @@ bash ini.sh
 If you use Oyster I in your research, please cite the following paper:
 
 ```bash
-@article{oyster1,
-  title={Oyster I: Beyond Refusal — Constructive Safety Alignment for Responsible Language Models},
-  author={Alibaba AI Group (AAIG)},
-  year={2024},
-  url={https://github.com/your-org/oyster1}
+@article{duan2025oyster,
+  title={Oyster-I: Beyond Refusal--Constructive Safety Alignment for Responsible Language Models},
+  author={Duan, Ranjie and Liu, Jiexi and Jia, Xiaojun and Zhao, Shiji and Cheng, Ruoxi and Wang, Fengxiang and Wei, Cheng and Xie, Yong and Liu, Chang and Li, Defeng and others},
+  journal={arXiv preprint arXiv:2509.01909},
+  year={2025}
 }
 ```
 
