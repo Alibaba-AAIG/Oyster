@@ -25,6 +25,8 @@
 
 Currently, large language models (LLMs) predominantly employ simple refusal mechanisms to prevent generating harmful content. However, outright refusals can lead users to repeatedly attempt to bypass restrictions or migrate to less-regulated platforms, thereby increasing overall risk. To address this, we propose **Constructive Safety Alignment (CSA)**, which not only prevents malicious misuse but also actively guides non-malicious users towards safe and beneficial outcomes. This approach is implemented in **Oyster‑1 (Oy1)**. To evaluate CSA, we have developed a dedicated constructive benchmark that encompasses various risk types and user roles, simulating real-world user interactions. Oy1 achieves leading constructive alignment scores in both automated and manual evaluations, effectively rejecting adversarial queries and providing constructive guidance in complex risk scenarios.
 
+**Try DEMO ->**: https://modelscope.cn/studios/OysterAI/Oyster_Chat/summary
+
 <p align="center">
   <img src="./assets/exp_1.png" alt="Example Image" width="800"/>
 </p>
@@ -88,6 +90,15 @@ This project will release the following:
 ---
 
 ## 🚀 Quick Start
+### 0. Download
+```python
+from huggingface_hub import snapshot_download
+snapshot_download(repo_id="OysterAI/Oyster_1_Qwen_14B")
+```
+or
+```bash
+huggingface-cli download OysterAI/Oyster_1_Qwen_14B
+```
 
 ### 1. Chat with Oyster‑1
 
@@ -96,7 +107,7 @@ You can interact with Oyster‑1 using just a few lines of code with the `transf
 ```python
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-model_name = "Alibaba-AAIG/Oyster-1"
+model_name = "OysterAI/Oyster_1_Qwen_14B""
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
