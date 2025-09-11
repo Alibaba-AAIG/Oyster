@@ -89,6 +89,15 @@
 
 
 ## 🚀 快速上手
+### 0. 下载
+```python
+from huggingface_hub import snapshot_download
+snapshot_download(repo_id="OysterAI/Oyster_1_Qwen_14B")
+```
+or
+```bash
+huggingface-cli download OysterAI/Oyster_1_Qwen_14B
+```
 
 ### 1. 使用 Oyster-1 进行对话
 
@@ -97,7 +106,7 @@
 ```python
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-model_name = "Alibaba-AAIG/Oyster-1"
+model_name = "OysterAI/Oyster_1_Qwen_14B"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(
