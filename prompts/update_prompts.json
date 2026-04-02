@@ -1,0 +1,12 @@
+{
+    "cn":{
+        "developer_update": "./prompts/cn/developer_update.txt",
+        "user_update": "./prompts/cn/user_update.txt",
+        "both_update": "./prompts/cn/both_update.txt"
+    },
+    "en":{
+        "developer_update": "./prompts/en/developer_update.txt",
+        "user_update": "./prompts/en/user_update.txt",
+        "both_update": "./prompts/en/both_update.txt"
+    }
+}

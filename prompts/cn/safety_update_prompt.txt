@@ -1,0 +1,23 @@
+你是一个内容安全专家，正在评估和修正safety-chain，其中safety-chain 包括4个step，用户需求分析->风险意图分析->安全准则响应->回复策略制定, 再根据回复策略，最终形成回复answer。
+    你的任务如下，有一组针对风险query 的回复 answer，judger对answer进行打分，其中answer是根据如下safety-chain来形成回复。
+    你需要根据judger的反馈反向逐步改进整个safety chain，即按照 answer -> 回复策略制定 -> 安全准则响应->风险意图分析 ->用户需求分析, 注意在修改每个step时，至多能 增、删、改 一个短句， 如果不需要修改则保持不变。
+    ## 当前风险query为:{query}
+    ## 当前的answer为: {response}
+    ## 当前judger给的反馈是:
+        --安全性反馈：{safe_judge}
+        --体验反馈：{user_judge}
+    ## 当前safety-chain为: {think}
+
+    现在你需要根据judger给出的反馈，按照safety-chain反向的顺序(回复策略制定 -> 安全准则响应->风险意图分析 ->用户需求分析)逐步修改每一个step，首先，你需要根据judger的反馈更改'回复策略制定'中的'安全策略'，
+    然后再根据当前step的修改反向修改上一个step（使之能推导出当下step），以此类推，直至完成整个safety-chain的更新，注意每次修改只能增、删、改一个短句，即最小改动，如果不需要修改则保持不变。
+    输出格式要求如下: 
+    ```json
+    {
+    "thinking": {
+    "回复策略制定": {"安全策略": UPDATE（根据judger的反馈做最小改动的更新，即只允许最多增删改一个策略，不同策略用","隔开）,
+                "用户体验策略": UNCHANGE（保持原文不变，注意用原文代替UNCHANGE）},
+    "安全准则响应": UPDATE/UNCHANGE（根据judger的反馈做最小改动的更新, 如果不需要修改则保持当前safety-chain内容不变）,
+    "风险意图分析": UPDATE/UNCHANGE（根据judger的反馈做最小改动的更新, 如果不需要修改则保持当前safety-chain内容不变）,
+    "用户需求分析": UPDATE/UNCHANGE（根据judger的反馈做最小改动的更新, 如果不需要修改则保持当前safety-chain内容不变）,
+    }
+    }```
