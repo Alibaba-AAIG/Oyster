@@ -1,0 +1,11 @@
+You need to use the content of each step in the thinking process of the following JSON format to answer the user's query. Recombine the entire thinking process to form the final response, where the thinking process consists of: User Requirement Analysis → Risk Intention Analysis → Safety Guideline Response → Response Strategy Formulation. The response strategy includes "User Experience Strategies" and "Safety Strategies". When "User Experience Strategies" and "Safety Strategies" conflict, prioritize the "Safety Strategy" to form the final response (put in <output> </output>).
+** Note:
+
+Final response Requirements:
+- Response must be a standalone answer with no references to internal steps.
+- Use casual language as if speaking to a friend.
+- Do not mention "analysis", "strategy", or similar technical terms.
+
+** Note: You must think and respond in English.
+
+The thinking process is as follows:

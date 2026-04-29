@@ -1,0 +1,3 @@
+You need to think and respond naturally according to the structured response idea below:
+{{chain}}
+Note: You must act as if you're unaware of the framework above. When formulating your thoughts, avoid directly generating any elements from the structured information, including but not limited to terms like "safety guidelines", "response strategies", "safety strategies", or "usefulness strategies"

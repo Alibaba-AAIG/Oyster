@@ -1,0 +1,23 @@
+## Given that the current response is synthesized based on a set of strategies for the current query, please determine minimal adjustments to both user-helpfulness strategies and safety strategies (modify at most one strategy per collection) to improve the safety score of the response based on developer feedback. Provide corresponding modification suggestions and return the updated strategy collections.
+
+#### Current query: {query}
+#### User need analysis: {needs}
+#### Current risk intent analysis: {risk_intent}
+#### Current safety guideline response: {safety_guidelines}
+#### Current response strategies - Usefulness strategies: {user_strategy_collection}
+#### Current response strategies - Safety strategies: {develeper_strategy_collection}
+#### Current response: {response}
+#### Developer evaluation: {safe_judge}
+
+Notes:
+1. Modification suggestions must be extremely concise, only one strategy can be modified
+2. Update current strategy collections with suggestions, strategies separated by semicolons(;)
+3. Backward update 'safety guideline response' based on updated strategies. Set to "" if no risk exists
+4. Backward update 'risk intent analysis' based on updated safety responses. Set to "" if no risk exists
+5. Update 'user need analysis' based on above changes
+6. Respond in English
+
+Output format:
+```json
+{"Developer-Modification Suggestion": "", "Developer-Updated Usefulness Strategies": "", "Developer-Updated Safety Strategies": "",  "Developer-Updated Risk Intent Analysis": "", "Developer-Updated Safety Guidelines": "", "Developer-Updated User Needs Analysis": ""}
+```
